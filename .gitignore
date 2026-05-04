@@ -1,0 +1,19 @@
+# Compiled binaries
+MovieRecommender
+FP
+F_P
+*.exe
+
+# Object files
+*.o
+
+# Compressed archives
+*.zip
+*.tar.gz
+
+# Test scripts
+test_cf.sh
+
+# Temporary files
+*.bak
+.DS_Store
