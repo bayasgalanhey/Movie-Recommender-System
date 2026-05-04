@@ -1,0 +1,251 @@
+﻿id,name,genre,rating
+1,The Shawshank Redemption,Drama,9.3
+2,The Godfather,Crime,9.2
+3,The Dark Knight,Action,9
+4,The Godfather Part II,Crime,9
+5,12 Angry Men,Crime,9
+6,Schindler's List,Biography,9
+7,The Lord of the Rings: The Return of the King,Action,9
+8,Pulp Fiction,Crime,8.9
+9,The Lord of the Rings: The Fellowship of the Ring,Action,8.8
+10,"The Good, the Bad and the Ugly",Adventure,8.8
+11,Forrest Gump,Drama,8.8
+12,Fight Club,Drama,8.8
+13,The Lord of the Rings: The Two Towers,Action,8.8
+14,Inception,Action,8.8
+15,Star Wars: Episode V - The Empire Strikes Back,Action,8.7
+16,The Matrix,Action,8.7
+17,Goodfellas,Biography,8.7
+18,One Flew Over the Cuckoo's Nest,Drama,8.7
+19,Se7en,Crime,8.6
+20,Seven Samurai,Action,8.6
+21,It's a Wonderful Life,Drama,8.6
+22,The Silence of the Lambs,Crime,8.6
+23,City of God,Crime,8.6
+24,Saving Private Ryan,Drama,8.6
+25,Interstellar,Adventure,8.6
+26,Life Is Beautiful,Comedy,8.6
+27,The Green Mile,Crime,8.6
+28,Star Wars: Episode IV - A New Hope,Action,8.6
+29,Terminator 2: Judgment Day,Action,8.6
+30,Back to the Future,Adventure,8.5
+31,Spirited Away,Animation,8.6
+32,The Pianist,Biography,8.5
+33,Psycho,Horror,8.5
+34,Parasite,Drama,8.5
+35,L√©on: The Professional,Action,8.5
+36,The Lion King,Animation,8.5
+37,Gladiator,Action,8.5
+38,American History X,Crime,8.5
+39,The Departed,Crime,8.5
+40,The Usual Suspects,Crime,8.5
+41,The Prestige,Drama,8.5
+42,Whiplash,Drama,8.5
+43,Casablanca,Drama,8.5
+44,Grave of the Fireflies,Animation,8.5
+45,Harakiri,Action,8.6
+46,The Intouchables,Biography,8.5
+47,Modern Times,Comedy,8.5
+48,Once Upon a Time in the West,Western,8.5
+49,Rear Window,Mystery,8.5
+50,Cinema Paradiso,Drama,8.5
+51,Alien,Horror,8.5
+52,City Lights,Comedy,8.5
+53,Apocalypse Now,Drama,8.5
+54,Memento,Mystery,8.4
+55,Django Unchained,Drama,8.4
+56,Indiana Jones and the Raiders of the Lost Ark,Action,8.4
+57,WALL¬∑E,Animation,8.4
+58,The Lives of Others,Drama,8.4
+59,Sunset Blvd.,Drama,8.4
+60,Paths of Glory,Drama,8.4
+61,The Shining,Drama,8.4
+62,The Great Dictator,Comedy,8.4
+63,Avengers: Infinity War,Action,8.4
+64,Witness for the Prosecution,Crime,8.4
+65,Aliens,Action,8.4
+66,Spider-Man: Into the Spider-Verse,Animation,8.4
+67,American Beauty,Drama,8.4
+68,Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb,Comedy,8.4
+69,The Dark Knight Rises,Action,8.4
+70,Oldboy,Action,8.4
+71,Inglourious Basterds,Adventure,8.3
+72,Amadeus,Biography,8.4
+73,Coco,Animation,8.4
+74,Toy Story,Animation,8.3
+75,Joker,Crime,8.4
+76,Braveheart,Biography,8.4
+77,The Boat,Drama,8.4
+78,Avengers: Endgame,Action,8.4
+79,Princess Mononoke,Animation,8.4
+80,Once Upon a Time in America,Crime,8.3
+81,Good Will Hunting,Drama,8.3
+82,Your Name.,Animation,8.4
+83,3 Idiots,Comedy,8.4
+84,Singin' in the Rain,Comedy,8.3
+85,Requiem for a Dream,Drama,8.3
+86,Toy Story 3,Animation,8.3
+87,High and Low,Crime,8.4
+88,Capernaum,Drama,8.4
+89,Star Wars: Episode VI - Return of the Jedi,Action,8.3
+90,Eternal Sunshine of the Spotless Mind,Drama,8.3
+91,2001: A Space Odyssey,Adventure,8.3
+92,Reservoir Dogs,Crime,8.3
+93,Come and See,Drama,8.4
+94,The Hunt,Drama,8.3
+95,Citizen Kane,Drama,8.3
+96,M,Crime,8.3
+97,Lawrence of Arabia,Adventure,8.3
+98,North by Northwest,Action,8.3
+99,Vertigo,Mystery,8.3
+100,Ikiru,Drama,8.3
+101,Am√©lie,Comedy,8.3
+102,The Apartment,Comedy,8.3
+103,A Clockwork Orange,Crime,8.3
+104,Double Indemnity,Crime,8.3
+105,Full Metal Jacket,Drama,8.3
+106,Top Gun: Maverick,Action,8.3
+107,Scarface,Crime,8.3
+108,Hamilton,Biography,8.4
+109,Incendies,Drama,8.3
+110,To Kill a Mockingbird,Crime,8.3
+111,Heat,Action,8.3
+112,The Sting,Comedy,8.3
+113,Up,Animation,8.3
+114,A Separation,Drama,8.3
+115,Metropolis,Drama,8.3
+116,Taxi Driver,Crime,8.2
+117,L.A. Confidential,Crime,8.2
+118,Die Hard,Action,8.2
+119,Snatch,Comedy,8.2
+120,Indiana Jones and the Last Crusade,Action,8.2
+121,Bicycle Thieves,Drama,8.3
+122,Like Stars on Earth,Drama,8.3
+123,1917,Action,8.2
+124,Downfall,Biography,8.2
+125,Dangal,Action,8.3
+126,For a Few Dollars More,Western,8.2
+127,Batman Begins,Action,8.2
+128,The Kid,Comedy,8.3
+129,Some Like It Hot,Comedy,8.2
+130,The Father,Drama,8.2
+131,All About Eve,Drama,8.2
+132,The Wolf of Wall Street,Biography,8.2
+133,Green Book,Biography,8.2
+134,Judgment at Nuremberg,Drama,8.3
+135,Casino,Crime,8.2
+136,Ran,Action,8.2
+137,Pan's Labyrinth,Drama,8.2
+138,The Truman Show,Comedy,8.2
+139,There Will Be Blood,Drama,8.2
+140,Unforgiven,Drama,8.2
+141,The Sixth Sense,Drama,8.2
+142,Shutter Island,Mystery,8.2
+143,A Beautiful Mind,Biography,8.2
+144,Jurassic Park,Action,8.2
+145,Yojimbo,Action,8.2
+146,The Treasure of the Sierra Madre,Adventure,8.2
+147,Monty Python and the Holy Grail,Adventure,8.2
+148,The Great Escape,Adventure,8.2
+149,No Country for Old Men,Crime,8.2
+150,Spider-Man: No Way Home,Action,8.2
+151,Kill Bill: Vol. 1,Action,8.2
+152,Rashomon,Crime,8.2
+153,The Thing,Horror,8.2
+154,Finding Nemo,Animation,8.2
+155,The Elephant Man,Biography,8.2
+156,Chinatown,Drama,8.2
+157,Raging Bull,Biography,8.2
+158,V for Vendetta,Action,8.2
+159,Gone with the Wind,Drama,8.2
+160,"Lock, Stock and Two Smoking Barrels",Action,8.2
+161,Inside Out,Animation,8.2
+162,Dial M for Murder,Crime,8.2
+163,The Secret in Their Eyes,Drama,8.2
+164,Howl's Moving Castle,Animation,8.2
+165,"Three Billboards Outside Ebbing, Missouri",Comedy,8.1
+166,The Bridge on the River Kwai,Adventure,8.2
+167,Trainspotting,Drama,8.1
+168,Prisoners,Crime,8.1
+169,Warrior,Action,8.2
+170,Fargo,Crime,8.1
+171,Gran Torino,Drama,8.1
+172,My Neighbor Totoro,Animation,8.1
+173,Catch Me If You Can,Biography,8.1
+174,Million Dollar Baby,Drama,8.1
+175,Children of Heaven,Drama,8.2
+176,Blade Runner,Action,8.1
+177,The Gold Rush,Adventure,8.1
+178,Before Sunrise,Drama,8.1
+179,12 Years a Slave,Biography,8.1
+180,Klaus,Animation,8.2
+181,Harry Potter and the Deathly Hallows: Part 2,Adventure,8.1
+182,On the Waterfront,Crime,8.1
+183,Ben-Hur,Adventure,8.1
+184,Gone Girl,Drama,8.1
+185,The Grand Budapest Hotel,Adventure,8.1
+186,Wild Strawberries,Drama,8.1
+187,The General,Action,8.1
+188,The Third Man,Film-Noir,8.1
+189,In the Name of the Father,Biography,8.1
+190,The Deer Hunter,Drama,8.1
+191,Barry Lyndon,Adventure,8.1
+192,Hacksaw Ridge,Biography,8.1
+193,The Wages of Fear,Adventure,8.2
+194,Memories of Murder,Crime,8.1
+195,Sherlock Jr.,Action,8.2
+196,Wild Tales,Comedy,8.1
+197,Mr. Smith Goes to Washington,Comedy,8.1
+198,Mad Max: Fury Road,Action,8.1
+199,The Seventh Seal,Drama,8.1
+200,Mary and Max,Animation,8.1
+201,How to Train Your Dragon,Animation,8.1
+202,Room,Drama,8.1
+203,"Monsters, Inc.",Animation,8.1
+204,Jaws,Adventure,8.1
+205,Dead Poets Society,Comedy,8.1
+206,The Big Lebowski,Comedy,8.1
+207,Tokyo Story,Drama,8.2
+208,The Passion of Joan of Arc,Biography,8.2
+209,Hotel Rwanda,Biography,8.1
+210,Ford v Ferrari,Action,8.1
+211,Rocky,Drama,8.1
+212,Platoon,Drama,8.1
+213,Ratatouille,Animation,8.1
+214,Spotlight,Biography,8.1
+215,The Terminator,Action,8.1
+216,Logan,Action,8.1
+217,Stand by Me,Adventure,8.1
+218,Rush,Action,8.1
+219,Network,Drama,8.1
+220,Into the Wild,Adventure,8.1
+221,Before Sunset,Drama,8.1
+222,The Wizard of Oz,Adventure,8.1
+223,Pather Panchali,Drama,8.3
+224,Groundhog Day,Comedy,8.1
+225,The Best Years of Our Lives,Drama,8.1
+226,The Exorcist,Horror,8.1
+227,The Incredibles,Animation,8
+228,To Be or Not to Be,Comedy,8.2
+229,La haine,Crime,8.1
+230,The Battle of Algiers,Drama,8.1
+231,Pirates of the Caribbean: The Curse of the Black Pearl,Action,8.1
+232,Hachi: A Dog's Tale,Biography,8.1
+233,The Grapes of Wrath,Drama,8.1
+234,Jai Bhim,Crime,8.8
+235,My Father and My Son,Drama,8.2
+236,Amores Perros,Drama,8.1
+237,Rebecca,Drama,8.1
+238,Cool Hand Luke,Crime,8.1
+239,The Handmaiden,Drama,8.1
+240,The 400 Blows,Crime,8.1
+241,The Sound of Music,Biography,8.1
+242,It Happened One Night,Comedy,8.1
+243,Persona,Drama,8.1
+244,Life of Brian,Comedy,8
+245,The Iron Giant,Animation,8.1
+246,The Help,Drama,8.1
+247,Dersu Uzala,Adventure,8.2
+248,Aladdin,Animation,8
+249,Gandhi,Biography,8
+250,Dances with Wolves,Adventure,8

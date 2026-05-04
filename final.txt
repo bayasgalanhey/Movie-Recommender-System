@@ -1,0 +1,52 @@
+TITLE
+Bayasgalan Zorigt – CSCI 200 Section A
+Final Project: Movie Recommendation System
+
+PROBLEM DESCRIPTION
+This project implements a movie recommendation system that helps users decide what to watch by analyzing their movie ratings and preferred genres. Users can create profiles, rate movies, and receive customized recommendations based on the similarity between movies they enjoyed and movies they have not yet seen. The program aims to reduce the “what to watch” dilemma by providing automated suggestions grounded in user input and stored movie data. The movie and genre ideas, recommendation logic, and general workflow are based on the original project proposal, with adjustments made during development to better fit the final structure.
+
+PROGRAM DOCUMENTATION
+How to Run the Program:
+1. Compile all .cpp .h files together, for example:
+   Make 
+2. Ensure movies.csv is in the same directory as the executable.
+3. Run the program:
+   ./final
+4. The user interacts entirely through a text-based menu. No additional libraries (such as SFML) are required.
+
+Notes for Future Programmers / Possible Extensions:
+If a future programmer wishes to extend the project, some possible additions include:
+- Saving user profiles to a file so that ratings persist between sessions.
+- Supporting multi-word usernames.
+- Improved movie similarity algorithm.
+- Allowing dynamic movie importing or interactive movie searches.
+
+CLASS DESCRIPTION
+Custom Classes:
+The program contains three main custom classes: Movie, User, and Recommender.
+- Movie encapsulates movie title, ID, genre, rating, and rating count.
+- User stores a username, user ID, and the user's rated movies.
+- Recommender manages collections of users and movies, loads data, and generates recommendations.
+
+Using custom classes improved organization, modularity, and reusability, making the project easier to maintain and extend.
+
+LIST DATA STRUCTURE
+The program uses:
+- vector<Movie> to store movies.
+- vector<User> to store users.
+- vector<pair<int,double>> inside User to store ratings.
+Vectors were chosen because their dynamic resizing and sequential storage fits well with the needs of loading CSV data and iterating through collections.
+
+FILE I/O
+File I/O is used in loadMovies() to read movies.csv, which contains the movie database. This is necessary because movie data must come from an external source instead of being hard-coded. User data persistence was planned but removed due to time constraints.
+
+PROJECT MODIFICATIONS
+Several differences exist between the proposed design and the final implementation:
+- User data is not saved to a file.
+- The recommender algorithm was simplified.
+- User ratings use vector<pair<int,double>> instead of map<int,double>.
+- The login and persistent profile system was removed.
+These were removed to ensure the core system functioned reliably within the available time.
+
+REFLECTIONS
+This project taught me how to build a multi-class C++ application, manage file I/O, and design a recommendation algorithm. I faced challenges with debugging input handling and class interactions. If I repeated the project, I would implement user persistence, improve recommendation accuracy, and design a more advanced data structure backend. 
