@@ -72,17 +72,19 @@ int main() {
     while (choice != 5) {
 
         // Menu displayed to the user
-        cout << endl;
-        cout << "===== Movie Recommendation System =====" << endl;
-        cout << "1. Add New User" << endl;
-        cout << "2. Rate a Movie" << endl;
-        cout << "3. Show Recommendations" << endl;
-        cout << "4. List Movies" << endl;
-        cout << "5. Exit" << endl;
-        cout << "6. Show User Info" << endl;
+        cout << "\n\033[1;36m=========================================\033[0m\n";
+        cout << "\033[1;33m      🎬 Movie Recommendation System      \033[0m\n";
+        cout << "\033[1;36m=========================================\033[0m\n";
+        cout << "  \033[1;32m[1]\033[0m Add New User\n";
+        cout << "  \033[1;32m[2]\033[0m Rate a Movie\n";
+        cout << "  \033[1;32m[3]\033[0m Show Recommendations\n";
+        cout << "  \033[1;32m[4]\033[0m List Movies\n";
+        cout << "  \033[1;32m[6]\033[0m Show User Info\n";
+        cout << "  \033[1;31m[5]\033[0m Exit\n";
+        cout << "\033[1;36m=========================================\033[0m\n";
 
         // Request user input for the menu choice using safe integer input
-        choice = getInt("Enter choice: ");
+        choice = getInt("\033[1;35mEnter choice:\033[0m ");
 
         // Option 1: Add a new user to the system
         if (choice == 1) {
