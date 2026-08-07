@@ -79,7 +79,7 @@ int main() {
 
         // Menu displayed to the user
         cout << "\n\033[1;36m=========================================\033[0m\n";
-        cout << "\033[1;33m      🎬 Movie Recommendation System      \033[0m\n";
+        cout << "\033[1;33m       Movie Recommendation System       \033[0m\n";
         cout << "\033[1;36m=========================================\033[0m\n";
         cout << "  \033[1;32m[1]\033[0m Add New User\n";
         cout << "  \033[1;32m[2]\033[0m Rate a Movie\n";
