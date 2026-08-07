@@ -23,37 +23,43 @@ using namespace std;
 // Reads a valid integer from the user. If the user enters an invalid value
 // (such as letters or symbols), the function keeps asking until a valid
 // integer is received. This prevents the program from crashing or skipping input.
-int getInt(const string& prompt) {
-    int value;
+//
+// Returns false if the input stream ended (end-of-file) before a value could be
+// read. End-of-file is permanent, so retrying after it would loop forever --
+// the caller must stop asking and shut down instead.
+bool getInt(const string& prompt, int& value) {
     cout << prompt;
-    cin >> value;
 
-    while (cin.fail()) {
+    while (!(cin >> value)) {
+        if (cin.eof()) {
+            return false; // No more input will ever arrive; give up.
+        }
         cin.clear(); // Reset the fail state of cin
         cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Remove invalid input
         cout << "Invalid input. Try again: ";
-        cin >> value;
     }
 
-    return value;
+    return true;
 }
 
 // Reads a valid double value. Used specifically for movie rating input.
 // Rating values must be numeric, and this function ensures the user enters
 // a valid number rather than text or invalid characters.
-double getDouble(const string& prompt) {
-    double value;
+//
+// Returns false on end-of-file, for the same reason as getInt().
+bool getDouble(const string& prompt, double& value) {
     cout << prompt;
-    cin >> value;
 
-    while (cin.fail()) {
+    while (!(cin >> value)) {
+        if (cin.eof()) {
+            return false;
+        }
         cin.clear();
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
         cout << "Invalid input. Try again: ";
-        cin >> value;
     }
 
-    return value;
+    return true;
 }
 
 int main() {
@@ -83,8 +89,13 @@ int main() {
         cout << "  \033[1;31m[5]\033[0m Exit\n";
         cout << "\033[1;36m=========================================\033[0m\n";
 
-        // Request user input for the menu choice using safe integer input
-        choice = getInt("\033[1;35mEnter choice:\033[0m ");
+        // Request user input for the menu choice using safe integer input.
+        // A false return means the input stream ended, so there is nothing
+        // left to read and the program must stop.
+        if (!getInt("\033[1;35mEnter choice:\033[0m ", choice)) {
+            cout << "\nInput ended. Goodbye!" << endl;
+            break;
+        }
 
         // Option 1: Add a new user to the system
         if (choice == 1) {
@@ -92,10 +103,17 @@ int main() {
 
             // Collect the user's name
             cout << "Enter user name: ";
-            cin >> name;  // Assumes names are one word
+            if (!(cin >> name)) {  // Assumes names are one word
+                cout << "\nInput ended. Goodbye!" << endl;
+                break;
+            }
 
             // Collect a numeric ID for the user
-            int id = getInt("Enter user ID: ");
+            int id;
+            if (!getInt("Enter user ID: ", id)) {
+                cout << "\nInput ended. Goodbye!" << endl;
+                break;
+            }
 
             // Store the user in the recommender system
             rec.addUser(name, id);
@@ -104,9 +122,14 @@ int main() {
         // Option 2: Allow a user to rate a movie
         else if (choice == 2) {
             // Gather necessary information: user id, movie id, and rating
-            int userId = getInt("Enter your user ID: ");
-            int movieId = getInt("Enter movie ID to rate: ");
-            double rating = getDouble("Enter rating (0–10): ");
+            int userId, movieId;
+            double rating;
+            if (!getInt("Enter your user ID: ", userId) ||
+                !getInt("Enter movie ID to rate: ", movieId) ||
+                !getDouble("Enter rating (0–10): ", rating)) {
+                cout << "\nInput ended. Goodbye!" << endl;
+                break;
+            }
 
             // Check that the rating falls within the accepted range
             if (rating < 0.0 || rating > 10.0) {
@@ -129,7 +152,11 @@ int main() {
 
         // Option 3: Display personalized recommendations for a given user
         else if (choice == 3) {
-            int id = getInt("Enter user ID: ");
+            int id;
+            if (!getInt("Enter user ID: ", id)) {
+                cout << "\nInput ended. Goodbye!" << endl;
+                break;
+            }
             rec.displayRecommendations(id);
         }
 
@@ -151,9 +178,13 @@ int main() {
             cout << "Goodbye!" << endl;
         }//Option 6: Show user info
         else if (choice == 6) {
+            // Use the validated helper here too, so a non-numeric entry or a
+            // closed input stream is handled the same way as everywhere else.
             int id;
-            cout << "Enter user ID: ";
-            cin >> id;
+            if (!getInt("Enter user ID: ", id)) {
+                cout << "\nInput ended. Goodbye!" << endl;
+                break;
+            }
 
             unordered_map<int, User>& users = rec.getUsers();
             auto it = users.find(id);
@@ -168,9 +199,13 @@ int main() {
             cout << "Invalid choice. Try again." << endl;
         }
 
-        // Clear any leftover characters in the input buffer to prevent issues
-        cin.clear();
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        // Discard anything left over on the current input line (such as the
+        // newline that >> leaves behind). Deliberately no cin.clear() here:
+        // clearing would also erase the end-of-file flag, and that flag is
+        // what tells the next read to stop instead of spinning forever.
+        if (cin.good()) {
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        }
     }
 
     return 0;

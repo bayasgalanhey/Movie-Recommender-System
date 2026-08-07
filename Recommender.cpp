@@ -6,6 +6,7 @@
 #include <sstream>
 #include <iostream>
 #include <algorithm>
+#include <stdexcept>   // invalid_argument, out_of_range (thrown by stoi/stod)
 
 using namespace std;
 
@@ -43,6 +44,7 @@ void Recommender::loadMovies(const string& filename) {
 
     string line;
     string header;
+    int skipped = 0;   // Number of rows rejected as malformed
 
     // Skip header line
     getline(file, header);
@@ -73,19 +75,38 @@ void Recommender::loadMovies(const string& filename) {
 
         // Expecting exactly 4 columns: id, name, genre, rating
         if (cols.size() != 4) {
+            skipped++;
             continue;
         }
 
-        int id = stoi(cols[0]);
+        // stoi/stod throw when a field is not a number ("abc", "", "1e999").
+        // An uncaught throw here would terminate the whole program, so a bad
+        // row is caught and skipped instead -- one typo in the data file must
+        // not stop the other 249 movies from loading.
+        int id = 0;
+        double rating = 0.0;
+        try {
+            id = stoi(cols[0]);
+            rating = stod(cols[3]);
+        } catch (const invalid_argument&) {
+            skipped++;      // Field was not a number at all
+            continue;
+        } catch (const out_of_range&) {
+            skipped++;      // Field was a number too large to store
+            continue;
+        }
+
         string name = cols[1];
         string genre = cols[2];
-        double rating = stod(cols[3]);
 
         _movies[id] = Movie(id, name, genre, rating);
     }
 
     file.close();
     cout << "Loaded " << _movies.size() << " movies." << endl;
+    if (skipped > 0) {
+        cout << "Warning: skipped " << skipped << " malformed row(s) in " << filename << "." << endl;
+    }
 }
 
 /**
